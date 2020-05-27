@@ -24,6 +24,12 @@ let controller = function() {
     addCommentFromInputBox();
   });
 
+  $(".comment-delete button").on("click", function(event) {
+    console.log("delete");
+    localStorage.clear();
+    window.location.reload();
+  });
+
   $(".comment-input input").on("keypress", function(event) {
     if (event.keyCode === 13) {
       addCommentFromInputBox();
